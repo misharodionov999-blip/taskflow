@@ -19,9 +19,11 @@ function NotFoundPage() {
   )
 }
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <TaskFlowProvider>
         <AppShell>
           <Routes>
